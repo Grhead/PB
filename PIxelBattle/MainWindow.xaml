@@ -22,11 +22,11 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            <Style.Triggers>
+            <!--<Style.Triggers>
                 <Trigger Property="IsFocused" Value="true">
                     <Setter Property = "Background" Value="{Binding SelectedColor}"/>
                 </Trigger>
-            </Style.Triggers>
+            </Style.Triggers>-->
         </Style>
     </Window.Resources>
 
@@ -41,63 +41,89 @@
         <StackPanel
             Grid.Column="1"
             Orientation="Horizontal"
-            Margin="30 75 0 0">
+            Margin="30 35 0 0">
             <StackPanel>
                 <Button
+                Name="b0"
                 Height="100"
                 Width="100"
                 BorderBrush="Black"
-                BorderThickness="2">
+                BorderThickness="2"
+                Click="b0_Click">
                 </Button>
                 <Button
+                Name="b1"
                 Height="100"
                 Width="100"
-                Margin="0 0 0 0"
                 BorderBrush="Black"
-                BorderThickness="2">
+                BorderThickness="2"
+                Click="b1_Click_1">
                 </Button>
                 <Button
+                Name="b2"
                 Height="100"
                 Width="100"
-                Margin="0 0 0 0"
                 BorderBrush="Black"
                 BorderThickness="2"
-                />
+                Click="b2_Click">
+                </Button>
                 <Button
+                    Name="b3"
                 Height="100"
                 Width="100"
                 Margin="0 0 0 0"
                 BorderBrush="Black"
                 BorderThickness="2"
-                />
+                    Click="b3_Click">
+                </Button>
                 <Button
+                    Name="b4"
                 Height="100"
                 Width="100"
                 Margin="0 0 0 0"
                 BorderBrush="Black"
                 BorderThickness="2"
-                />
+                Click="b4_Click"/>
                 <Button
+                    Name="b5"
                 Height="100"
                 Width="100"
                 Margin="0 0 0 0"
                 BorderBrush="Black"
                 BorderThickness="2"
-                />
+                Click="b5_Click"/>
                 <Button
+                    Name="b6"
                 Height="100"
                 Width="100"
                 Margin="0 0 0 0"
                 BorderBrush="Black"
                 BorderThickness="2"
-                />
+                Click="b6_Click"/>
                 <Button
+                    Name="b7"
                 Height="100"
                 Width="100"
                 Margin="0 0 0 0"
                 BorderBrush="Black"
                 BorderThickness="2"
-                />
+                Click="b7_Click"/>
+                <Button
+                    Name="b8"
+                Height="100"
+                Width="100"
+                Margin="0 0 0 0"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Click="b8_Click"/>
+                <Button
+                    Name="b9"
+                Height="100"
+                Width="100"
+                Margin="0 0 0 0"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Click="b9_Click"/>
             </StackPanel>
             
         </StackPanel>

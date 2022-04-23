@@ -10,8 +10,8 @@ namespace PIxelBattle
     public class ViewModel : StaticViewModel
     {
 
-        private string _selectedColor;
-        public string SelectedColor
+        private static string _selectedColor;
+        public static string SelectedColor
         {
             get
             {
@@ -20,7 +20,7 @@ namespace PIxelBattle
             set
             {
                 _selectedColor  = value;
-                OnPropertyChanged();
+                //OnPropertyChanged();
             }
         }
         //private List<BasicData> _dataSet;
@@ -29,6 +29,7 @@ namespace PIxelBattle
         //    get { return _dataSet; }
         //    set { _dataSet = BasicData.BasicSet(); }
         //}
+        
         private RelayCommand _changeColor;
         public RelayCommand ChangeColor => _changeColor ?? new RelayCommand(x =>
         {
