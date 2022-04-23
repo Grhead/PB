@@ -9,34 +9,36 @@ namespace PIxelBattle
 {
     public class ViewModel : StaticViewModel
     {
-        public ViewModel() 
-        {
-            _currentCell = "red";
-            _dataSet = BasicData.BasicSet();
-        }
-        private string _currentCell;
-        public string CurrentCell
+
+        private string _selectedColor;
+        public string SelectedColor
         {
             get
             {
-                return _currentCell;
+                return _selectedColor;
             }
             set
             {
-                _currentCell  = "red";
+                _selectedColor  = value;
                 OnPropertyChanged();
             }
         }
-        private List<BasicData> _dataSet;
-        public List<BasicData> DataSet
-        {
-            get { return _dataSet; }
-            set { _dataSet = BasicData.BasicSet(); }
-        }
+        //private List<BasicData> _dataSet;
+        //public List<BasicData> DataSet
+        //{
+        //    get { return _dataSet; }
+        //    set { _dataSet = BasicData.BasicSet(); }
+        //}
         private RelayCommand _changeColor;
         public RelayCommand ChangeColor => _changeColor ?? new RelayCommand(x =>
         {
-            CurrentCell = "red";
+            SelectedColor = x.ToString();
+            OnPropertyChanged();
+        });
+        private RelayCommand _setColor;
+        public RelayCommand SetColor => _setColor ?? new RelayCommand(x =>
+        {
+            
             OnPropertyChanged();
         });
     }

@@ -8,38 +8,100 @@
         Title="MainWindow" Height="1080" Width="1920"
         WindowState="Maximized"
         ResizeMode="CanMinimize">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsFocused" Value="true">
+                    <Setter Property = "Background" Value="{Binding SelectedColor}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="1050"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <DataGrid
-            x:Name="DataTable"
-            SelectionUnit="Cell"
-            ItemsSource = "{Binding DataSet, UpdateSourceTrigger=PropertyChanged}"
-            SelectedItem="{Binding CurrentCell}"
+        <StackPanel
             Grid.Column="1"
-            Grid.Row="0"
-            MinColumnWidth="94"
-            MinRowHeight="104"
-            Height="958"
-            Width="950"
-            SelectionMode="Single"
-            CanUserAddRows="False"
-            CanUserSortColumns="False"
-            CanUserDeleteRows="False"
-            CanUserResizeRows="False"
-            CanUserResizeColumns="False"
-            CanUserReorderColumns="False"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            BorderBrush="MistyRose"
-            BorderThickness="2"
-            HeadersVisibility="None">
-        </DataGrid>
+            Orientation="Horizontal"
+            Margin="30 75 0 0">
+            <StackPanel>
+                <Button
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2">
+                </Button>
+                <Button
+                Height="100"
+                Width="100"
+                Margin="0 0 0 0"
+                BorderBrush="Black"
+                BorderThickness="2">
+                </Button>
+                <Button
+                Height="100"
+                Width="100"
+                Margin="0 0 0 0"
+                BorderBrush="Black"
+                BorderThickness="2"
+                />
+                <Button
+                Height="100"
+                Width="100"
+                Margin="0 0 0 0"
+                BorderBrush="Black"
+                BorderThickness="2"
+                />
+                <Button
+                Height="100"
+                Width="100"
+                Margin="0 0 0 0"
+                BorderBrush="Black"
+                BorderThickness="2"
+                />
+                <Button
+                Height="100"
+                Width="100"
+                Margin="0 0 0 0"
+                BorderBrush="Black"
+                BorderThickness="2"
+                />
+                <Button
+                Height="100"
+                Width="100"
+                Margin="0 0 0 0"
+                BorderBrush="Black"
+                BorderThickness="2"
+                />
+                <Button
+                Height="100"
+                Width="100"
+                Margin="0 0 0 0"
+                BorderBrush="Black"
+                BorderThickness="2"
+                />
+            </StackPanel>
+            
+        </StackPanel>
+        
         <StackPanel
             Grid.Row="0"
             Grid.Column="0"
@@ -51,7 +113,6 @@
                 Margin="0 50 60 0"
                 Background="Red"
                 Command="{Binding ChangeColor}"
-                Click="Button_Click"
                 CommandParameter="Red"
                 />
             <Button
@@ -60,7 +121,8 @@
                 HorizontalAlignment="Right"
                 Margin="0 40 60 0"
                 Background="Orange"
-
+                Command="{Binding ChangeColor}"
+                CommandParameter="Orange"
             />
             <Button
                 Height="100"
@@ -68,6 +130,8 @@
                 HorizontalAlignment="Right"
                 Margin="0 40 60 0"
                 Background="Yellow"
+                Command="{Binding ChangeColor}"
+                CommandParameter="Yellow"
             />
             <Button
                 Height="100"
@@ -75,6 +139,8 @@
                 HorizontalAlignment="Right"
                 Margin="0 40 60 0"
                 Background="Green"
+                Command="{Binding ChangeColor}"
+                CommandParameter="Green"
             />
             <Button
                 Height="100"
@@ -82,6 +148,8 @@
                 HorizontalAlignment="Right"
                 Margin="0 40 60 0"
                 Background="LightBlue"
+                Command="{Binding ChangeColor}"
+                CommandParameter="LightBlue"
             />
             <Button
                 Height="100"
@@ -89,6 +157,8 @@
                 HorizontalAlignment="Right"
                 Margin="0 40 60 0"
                 Background="Blue"
+                Command="{Binding ChangeColor}"
+                CommandParameter="Blue"
             />
             <Button
                 Height="100"
@@ -96,6 +166,8 @@
                 HorizontalAlignment="Right"
                 Margin="0 40 60 0"
                 Background="Purple"
+                Command="{Binding ChangeColor}"
+                CommandParameter="Purple"
             />
         </StackPanel>
     </Grid>
