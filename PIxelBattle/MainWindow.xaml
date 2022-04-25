@@ -9,7 +9,7 @@
         WindowState="Maximized"
         ResizeMode="CanMinimize">
 
-    <Window.Resources>
+    <!--<Window.Resources>
         <Style TargetType="{x:Type Button}">
             <Setter Property="Template">
                 <Setter.Value>
@@ -22,13 +22,13 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            <!--<Style.Triggers>
+            --><!--<Style.Triggers>
                 <Trigger Property="IsFocused" Value="true">
                     <Setter Property = "Background" Value="{Binding SelectedColor}"/>
                 </Trigger>
-            </Style.Triggers>-->
+            </Style.Triggers>--><!--
         </Style>
-    </Window.Resources>
+    </Window.Resources>-->
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -49,7 +49,9 @@
                 Width="100"
                 BorderBrush="Black"
                 BorderThickness="2"
-                Click="b0_Click">
+                Command="{Binding SetColor}"
+                CommandParameter="A1"
+                Background="{Binding A1}">
                 </Button>
                 <Button
                 Name="b1"
@@ -57,7 +59,9 @@
                 Width="100"
                 BorderBrush="Black"
                 BorderThickness="2"
-                Click="b1_Click_1">
+                Command="{Binding SetColor}"
+                CommandParameter="A2"
+                Background="{Binding A2}">
                 </Button>
                 <Button
                 Name="b2"
@@ -65,65 +69,10 @@
                 Width="100"
                 BorderBrush="Black"
                 BorderThickness="2"
-                Click="b2_Click">
+                    Command="{Binding SetColor}"
+                CommandParameter="A3">
                 </Button>
-                <Button
-                    Name="b3"
-                Height="100"
-                Width="100"
-                Margin="0 0 0 0"
-                BorderBrush="Black"
-                BorderThickness="2"
-                    Click="b3_Click">
-                </Button>
-                <Button
-                    Name="b4"
-                Height="100"
-                Width="100"
-                Margin="0 0 0 0"
-                BorderBrush="Black"
-                BorderThickness="2"
-                Click="b4_Click"/>
-                <Button
-                    Name="b5"
-                Height="100"
-                Width="100"
-                Margin="0 0 0 0"
-                BorderBrush="Black"
-                BorderThickness="2"
-                Click="b5_Click"/>
-                <Button
-                    Name="b6"
-                Height="100"
-                Width="100"
-                Margin="0 0 0 0"
-                BorderBrush="Black"
-                BorderThickness="2"
-                Click="b6_Click"/>
-                <Button
-                    Name="b7"
-                Height="100"
-                Width="100"
-                Margin="0 0 0 0"
-                BorderBrush="Black"
-                BorderThickness="2"
-                Click="b7_Click"/>
-                <Button
-                    Name="b8"
-                Height="100"
-                Width="100"
-                Margin="0 0 0 0"
-                BorderBrush="Black"
-                BorderThickness="2"
-                Click="b8_Click"/>
-                <Button
-                    Name="b9"
-                Height="100"
-                Width="100"
-                Margin="0 0 0 0"
-                BorderBrush="Black"
-                BorderThickness="2"
-                Click="b9_Click"/>
+                
             </StackPanel>
             
         </StackPanel>
