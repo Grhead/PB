@@ -10,12 +10,24 @@ namespace PIxelBattle
     public class ViewModel : StaticViewModel
     {
         //public static List<MyColor> ListOfProperties = new List<MyColor>();
-        public static List<MyColor> ListOfProperties { get; set; }
+        public List<MyColor> _listOfProperties;
+        public List<MyColor> ListOfProperties
+        {
+            get
+            {
+                return _listOfProperties;
+            }
+            set
+            {
+                _listOfProperties = value;
+                OnPropertyChanged();
+            }
+        }
         public ViewModel()
         {
             ListOfProperties = new List<MyColor>();
-            ListOfProperties.Add(new MyColor { Name = "A1", Color = "White" });
-            ListOfProperties.Add(new MyColor { Name = "A2", Color = "White" });
+            ListOfProperties.Add(new MyColor { Name = "A1", Color = "Red" });
+            ListOfProperties.Add(new MyColor { Name = "A2", Color = "Green" });
         }
         private static string _selectedColor;
         public static string SelectedColor

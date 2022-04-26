@@ -51,7 +51,7 @@
                 BorderThickness="2"
                 Command="{Binding SetColor}"
                 CommandParameter="A1"
-                Background="{Binding Path = ListOfProperties[0].Color}">
+                Background="{Binding Path = ListOfProperties[0].Color, UpdateSourceTrigger=PropertyChanged}">
                 </Button>
                 <Button
                 Name="b1"
