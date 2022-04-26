@@ -9,9 +9,11 @@ namespace PIxelBattle
 {
     public class ViewModel : StaticViewModel
     {
-        public List<MyColor> ListOfProperties = new List<MyColor>();
+        //public static List<MyColor> ListOfProperties = new List<MyColor>();
+        public static List<MyColor> ListOfProperties { get; set; }
         public ViewModel()
         {
+            ListOfProperties = new List<MyColor>();
             ListOfProperties.Add(new MyColor { Name = "A1", Color = "White" });
             ListOfProperties.Add(new MyColor { Name = "A2", Color = "White" });
         }

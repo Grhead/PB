@@ -22,11 +22,11 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            --><!--<Style.Triggers>
+            <Style.Triggers>
                 <Trigger Property="IsFocused" Value="true">
                     <Setter Property = "Background" Value="{Binding SelectedColor}"/>
                 </Trigger>
-            </Style.Triggers>--><!--
+            </Style.Triggers>
         </Style>
     </Window.Resources>-->
 
@@ -49,21 +49,19 @@
                 Width="100"
                 BorderBrush="Black"
                 BorderThickness="2"
-                DataContext="{Binding ListOfProperties[0]}"
                 Command="{Binding SetColor}"
                 CommandParameter="A1"
-                Background="{Binding Path = Color}">
+                Background="{Binding Path = ListOfProperties[0].Color}">
                 </Button>
                 <Button
                 Name="b1"
                 Height="100"
                 Width="100"
                 BorderBrush="Black"
-                    DataContext="{Binding ListOfProperties[0]}"
                 BorderThickness="2"
                 Command="{Binding SetColor}"
                 CommandParameter="A2"
-                Background="{Binding Path = Color}">
+                Background="{Binding Path = ListOfProperties[1].Color}">
                 </Button>
                 <Button
                 Name="b2"
@@ -88,7 +86,7 @@
                 Width="100"
                 HorizontalAlignment="Right"
                 Margin="0 50 60 0"
-                Background="Red"
+                Background="#FF0000"
                 Command="{Binding ChangeColor}"
                 CommandParameter="Red"
                 />
