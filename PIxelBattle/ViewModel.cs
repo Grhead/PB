@@ -9,11 +9,11 @@ namespace PIxelBattle
 {
     public class ViewModel : StaticViewModel
     {
-        public List<object> ListOfProperties = new List<object>();
+        public List<MyColor> ListOfProperties = new List<MyColor>();
         public ViewModel()
         {
-            ListOfProperties.Add(A1);
-            ListOfProperties.Add(A2);
+            ListOfProperties.Add(new MyColor { Name = "A1", Color = "White" });
+            ListOfProperties.Add(new MyColor { Name = "A2", Color = "White" });
         }
         private static string _selectedColor;
         public static string SelectedColor
@@ -36,15 +36,12 @@ namespace PIxelBattle
             OnPropertyChanged();
         });
 
-        public string A1 { get; set; } = "White";
-        public string A2 { get; set; } = "White";
-
         private RelayCommand _setColor;
         public RelayCommand SetColor => _setColor ?? new RelayCommand(x =>
         {
-            var param = x;
-            var temp = ListOfProperties.Find(x => x == param);
-            temp = SelectedColor;
+            var param = x.ToString();
+            var temp = ListOfProperties.Find(x => x.Name == param);
+            temp.Color = SelectedColor;
         });
     }
 }

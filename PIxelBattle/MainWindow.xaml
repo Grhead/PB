@@ -49,19 +49,21 @@
                 Width="100"
                 BorderBrush="Black"
                 BorderThickness="2"
+                DataContext="{Binding ListOfProperties[0]}"
                 Command="{Binding SetColor}"
                 CommandParameter="A1"
-                Background="{Binding A1}">
+                Background="{Binding Path = Color}">
                 </Button>
                 <Button
                 Name="b1"
                 Height="100"
                 Width="100"
                 BorderBrush="Black"
+                    DataContext="{Binding ListOfProperties[0]}"
                 BorderThickness="2"
                 Command="{Binding SetColor}"
                 CommandParameter="A2"
-                Background="{Binding A2}">
+                Background="{Binding Path = Color}">
                 </Button>
                 <Button
                 Name="b2"
