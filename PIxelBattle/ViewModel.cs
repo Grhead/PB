@@ -55,8 +55,8 @@ namespace PIxelBattle
         {
             var param = x.ToString();
             var temp = ListOfProperties.Find(x => x.Name == param);
+            var test = new LogClass {Adress = param, ColorBefore = temp.Color, ColorAfter = SelectedColor};
             temp.Color = SelectedColor;
-            var a = ListOfProperties[0].Color;
         });
     }
 }
