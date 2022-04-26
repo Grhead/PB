@@ -88,7 +88,7 @@
                 Margin="0 50 60 0"
                 Background="#FF0000"
                 Command="{Binding ChangeColor}"
-                CommandParameter="Red"
+                CommandParameter="#FF0000"
                 />
             <Button
                 Height="100"

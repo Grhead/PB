@@ -44,6 +44,7 @@ namespace PIxelBattle
             var param = x.ToString();
             var temp = ListOfProperties.Find(x => x.Name == param);
             temp.Color = SelectedColor;
+            var a = ListOfProperties[0].Color;
         });
     }
 }
