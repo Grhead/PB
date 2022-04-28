@@ -6,9 +6,19 @@ using System.Threading.Tasks;
 
 namespace PIxelBattle
 {
-    public class MyColor
+    public class MyColor : StaticViewModel
     {
-        public string Name { get; set; }
-        public string Color { get; set; }
+        private string _name;
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; OnPropertyChanged(); }
+        }
+        private string _color;
+        public string Color
+        {
+            get { return _color; }
+            set { _color = value; OnPropertyChanged(); }
+        }
     }
 }

@@ -29,8 +29,8 @@
             </Style.Triggers>
         </Style>
     </Window.Resources>-->
-
     <Grid>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition Width="1050"></ColumnDefinition>
