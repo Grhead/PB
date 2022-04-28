@@ -13,7 +13,7 @@
     WindowState="Maximized"
     mc:Ignorable="d">
     <Window.Background>
-        <ImageBrush ImageSource="C:\Users\forda\source\repos\PIxelBattle\PIxelBattle\BackFon.png" />
+        <ImageBrush ImageSource="\Resources\BackFon.png" />
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -1862,19 +1862,6 @@
                 </Button.Content>
             </Button>
         </StackPanel>
-        <TextBlock
-            Grid.Row="0"
-            Grid.Column="0"
-            Width="100"
-            FontSize="21"
-            Text="{Binding GetSets[0].Count}" />
-        <TextBlock
-            Grid.Row="0"
-            Grid.Column="0"
-            Width="100"
-            Margin="0,50,0,0"
-            FontSize="21"
-            Text="{Binding GetGets[0].Count}" />
         <Button
             Width="250"
             Height="100"
