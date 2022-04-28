@@ -42,7 +42,8 @@
             Grid.Column="1"
             Orientation="Horizontal"
             Margin="30 35 0 0">
-            <StackPanel>
+            <StackPanel
+                Width="100">
                 <Button
                 Name="b0"
                 Height="100"
@@ -69,26 +70,243 @@
                 Width="100"
                 BorderBrush="Black"
                 BorderThickness="2"
-                    Command="{Binding SetColor}"
-                CommandParameter="A3">
+                Command="{Binding SetColor}"
+                CommandParameter="A3"
+                Background="{Binding Path = ListOfProperties[2].Color, UpdateSourceTrigger=PropertyChanged}">
                 </Button>
-                
+                <Button
+                Name="b3"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A4"
+                Background="{Binding Path = ListOfProperties[3].Color, UpdateSourceTrigger=PropertyChanged}">
+                </Button>
+                <Button
+                Name="b4"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A5"
+                Background="{Binding Path = ListOfProperties[4].Color, UpdateSourceTrigger=PropertyChanged}">
+                </Button>
+                <Button
+                Name="b5"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A6"
+                Background="{Binding Path = ListOfProperties[5].Color, UpdateSourceTrigger=PropertyChanged}">
+                </Button>
+                <Button
+                Name="b6"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A7"
+                Background="{Binding Path = ListOfProperties[6].Color, UpdateSourceTrigger=PropertyChanged}">
+                </Button>
+                <Button
+                Name="b7"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A8"
+                Background="{Binding Path = ListOfProperties[7].Color, UpdateSourceTrigger=PropertyChanged}">
+                </Button>
+                <Button
+                Name="b8"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A9"
+                Background="{Binding Path = ListOfProperties[8].Color, UpdateSourceTrigger=PropertyChanged}">
+                </Button>
+                <Button
+                Name="b9"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A10"
+                Background="{Binding Path = ListOfProperties[9].Color, UpdateSourceTrigger=PropertyChanged}">
+                </Button>
             </StackPanel>
-            
+            <StackPanel
+                Width="100">
+                <Button
+                Name="b10"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A11"
+                Background="{Binding Path = ListOfProperties[10].Color, UpdateSourceTrigger=PropertyChanged}">
+                </Button>
+                <Button
+                Name="b11"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A12"
+                Background="{Binding Path = ListOfProperties[11].Color, UpdateSourceTrigger=PropertyChanged}">
+                </Button>
+                <Button
+                Name="b12"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A13"
+                Background="{Binding Path = ListOfProperties[12].Color, UpdateSourceTrigger=PropertyChanged}">
+                </Button>
+                <Button
+                Name="b13"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A14"
+                Background="{Binding Path = ListOfProperties[13].Color, UpdateSourceTrigger=PropertyChanged}">
+                </Button>
+                <Button
+                Name="b14"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A15"
+                Background="{Binding Path = ListOfProperties[14].Color, UpdateSourceTrigger=PropertyChanged}">
+                </Button>
+                <Button
+                Name="b15"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A16"
+                Background="{Binding Path = ListOfProperties[15].Color, UpdateSourceTrigger=PropertyChanged}">
+                </Button>
+                <Button
+                Name="b16"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A17"
+                Background="{Binding Path = ListOfProperties[16].Color, UpdateSourceTrigger=PropertyChanged}">
+                </Button>
+                <Button
+                Name="b17"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A18"
+                Background="{Binding Path = ListOfProperties[17].Color, UpdateSourceTrigger=PropertyChanged}">
+                </Button>
+                <Button
+                Name="b18"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A19"
+                Background="{Binding Path = ListOfProperties[18].Color, UpdateSourceTrigger=PropertyChanged}">
+                </Button>
+                <Button
+                Name="b19"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A20"
+                Background="{Binding Path = ListOfProperties[19].Color, UpdateSourceTrigger=PropertyChanged}">
+                </Button>
+            </StackPanel>
         </StackPanel>
-        
+        <ListBox
+           Grid.Row="0"
+           Grid.Column="0"
+           ItemsSource="{Binding Log}"
+            Width="700"
+            HorizontalAlignment="Left"
+            Background="Transparent"
+            Height="600"
+            BorderThickness="0"
+            Margin="50 0 0 0"
+            ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+            ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock
+                            Text="{Binding StringFormat=Ячейка: {0},Path=Adress, UpdateSourceTrigger=PropertyChanged}"
+                            Grid.Column="0"
+                            FontSize="16"
+                            FontWeight="Bold"/>
+                        <TextBlock
+                            Text="{Binding StringFormat=Цвет до: {0},Path =ColorBefore, UpdateSourceTrigger=PropertyChanged}"
+                            Grid.Column="1"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            Margin="10 0 0 0"/>
+                        <TextBlock
+                            Text="{Binding StringFormat=Цвет после: {0},Path=ColorAfter, UpdateSourceTrigger=PropertyChanged}"
+                            Grid.Column="2"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            Margin="10 0 0 0"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         <StackPanel
             Grid.Row="0"
             Grid.Column="0"
-            VerticalAlignment="Top">
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Width="190">
             <Button
                 Height="100"
                 Width="100"
                 HorizontalAlignment="Right"
                 Margin="0 50 60 0"
-                Background="#FF0000"
+                Background="Red"
                 Command="{Binding ChangeColor}"
-                CommandParameter="#FF0000"
+                CommandParameter="Red"
                 />
             <Button
                 Height="100"
