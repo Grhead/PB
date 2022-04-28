@@ -8,29 +8,10 @@
         Title="MainWindow" Height="1080" Width="1920"
         WindowState="Maximized"
         ResizeMode="CanMinimize">
-
-    <!--<Window.Resources>
-        <Style TargetType="{x:Type Button}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Background="{TemplateBinding Background}">
-                            <ContentPresenter 
-                                HorizontalAlignment="Center" 
-                                VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Style.Triggers>
-                <Trigger Property="IsFocused" Value="true">
-                    <Setter Property = "Background" Value="{Binding SelectedColor}"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-    </Window.Resources>-->
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\forda\source\repos\PIxelBattle\PIxelBattle\BackFon.png"/>
+    </Window.Background>
     <Grid>
-        
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition Width="1050"></ColumnDefinition>
@@ -42,54 +23,1831 @@
             Grid.Column="1"
             Orientation="Horizontal"
             Margin="30 35 0 0">
-            <StackPanel>
+            <StackPanel
+                Width="100">
                 <Button
-                Name="b0"
+                Content="{Binding Path = ListOfProperties[0].Name}"
+                FontSize="21"
+                FontFamily="Verdana"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                Foreground="{Binding ListOfProperties[0].Color2}"
                 Height="100"
                 Width="100"
                 BorderBrush="Black"
                 BorderThickness="2"
                 Command="{Binding SetColor}"
                 CommandParameter="A1"
-                Background="{Binding Path = ListOfProperties[0].Color, UpdateSourceTrigger=PropertyChanged}">
+                Background="{Binding Path = ListOfProperties[0].Color, UpdateSourceTrigger=PropertyChanged}"
+                Style="{DynamicResource RoundButton}">
                 </Button>
                 <Button
-                Name="b1"
+                    Content="{Binding Path = ListOfProperties[1].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[1].Color2}"
                 Height="100"
                 Width="100"
                 BorderBrush="Black"
                 BorderThickness="2"
                 Command="{Binding SetColor}"
                 CommandParameter="A2"
-                Background="{Binding Path = ListOfProperties[1].Color, UpdateSourceTrigger=PropertyChanged}">
+                Background="{Binding Path = ListOfProperties[1].Color, UpdateSourceTrigger=PropertyChanged}"
+                Style="{DynamicResource RoundButton}">
                 </Button>
                 <Button
-                Name="b2"
+                    Content="{Binding Path = ListOfProperties[2].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[2].Color2}"
                 Height="100"
                 Width="100"
                 BorderBrush="Black"
                 BorderThickness="2"
-                    Command="{Binding SetColor}"
-                CommandParameter="A3">
+                Command="{Binding SetColor}"
+                CommandParameter="A3"
+                Background="{Binding Path = ListOfProperties[2].Color, UpdateSourceTrigger=PropertyChanged}"
+                Style="{DynamicResource RoundButton}">
                 </Button>
-                
+                <Button
+                    Content="{Binding Path = ListOfProperties[3].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[3].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A4"
+                Background="{Binding Path = ListOfProperties[3].Color, UpdateSourceTrigger=PropertyChanged}"
+                Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[4].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[4].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A5"
+                Background="{Binding Path = ListOfProperties[4].Color, UpdateSourceTrigger=PropertyChanged}"
+                Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[5].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[5].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A6"
+                Background="{Binding Path = ListOfProperties[5].Color, UpdateSourceTrigger=PropertyChanged}"
+                Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[6].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[6].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A7"
+                Background="{Binding Path = ListOfProperties[6].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[7].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[7].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A8"
+                Background="{Binding Path = ListOfProperties[7].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[8].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[8].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A9"
+                Background="{Binding Path = ListOfProperties[8].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[9].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[9].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A10"
+                Background="{Binding Path = ListOfProperties[9].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
             </StackPanel>
-            
+            <StackPanel
+                Width="100">
+                <Button
+                    Content="{Binding Path = ListOfProperties[10].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[10].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A11"
+                Background="{Binding Path = ListOfProperties[10].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[11].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[11].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A12"
+                Background="{Binding Path = ListOfProperties[11].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>                                  
+                <Button      
+                    Content="{Binding Path = ListOfProperties[12].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[12].Color2}"
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                        
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A13"                     
+                Background="{Binding Path = ListOfProperties[12].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>                                 
+                <Button       
+                    Content="{Binding Path = ListOfProperties[13].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[13].Color2}"
+                Height="100"                              
+                Width="100"                               
+                BorderBrush="Black"                       
+                BorderThickness="2"                       
+                Command="{Binding SetColor}"              
+                CommandParameter="A14"                    
+                Background="{Binding Path = ListOfProperties[13].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>                                  
+                <Button       
+                    Content="{Binding Path = ListOfProperties[14].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[14].Color2}"
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                        
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A15"                     
+                Background="{Binding Path = ListOfProperties[14].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>                                  
+                <Button 
+                Content="{Binding Path = ListOfProperties[15].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[15].Color2}"
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                        
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A16"                       
+                Background="{Binding Path = ListOfProperties[15].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>                                  
+                <Button      
+                    Content="{Binding Path = ListOfProperties[16].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[16].Color2}"
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                        
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A17"                     
+                Background="{Binding Path = ListOfProperties[16].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>                                  
+                <Button       
+                    Content="{Binding Path = ListOfProperties[17].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[17].Color2}"
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                        
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A18"                     
+                Background="{Binding Path = ListOfProperties[17].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>                                  
+                <Button      
+                    Content="{Binding Path = ListOfProperties[18].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[18].Color2}"
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                        
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A19"                     
+                Background="{Binding Path = ListOfProperties[18].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>                                  
+                <Button     
+                    Content="{Binding Path = ListOfProperties[19].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[19].Color2}"
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                        
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A20"                     
+                Background="{Binding Path = ListOfProperties[19].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+            </StackPanel>
+            <StackPanel
+                Width="100">
+                <Button
+                    Content="{Binding Path = ListOfProperties[20].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[20].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A21"
+                Background="{Binding Path = ListOfProperties[20].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>                                 
+                <Button     
+                    Content="{Binding Path = ListOfProperties[21].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[21].Color2}"
+                Height="100"                              
+                Width="100"                               
+                BorderBrush="Black"                       
+                BorderThickness="2"                       
+                Command="{Binding SetColor}"              
+                CommandParameter="A22"                    
+                Background="{Binding Path = ListOfProperties[21].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>                                 
+                <Button     
+                    Content="{Binding Path = ListOfProperties[22].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[22].Color2}"
+                Height="100"                              
+                Width="100"                               
+                BorderBrush="Black"                       
+                BorderThickness="2"                       
+                Command="{Binding SetColor}"              
+                CommandParameter="A23"                    
+                Background="{Binding Path = ListOfProperties[22].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>                                  
+                <Button   
+                    Content="{Binding Path = ListOfProperties[23].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[23].Color2}"
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                        
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A24"                     
+                Background="{Binding Path = ListOfProperties[23].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>                                  
+                <Button     
+                    Content="{Binding Path = ListOfProperties[24].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[24].Color2}"
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                        
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A25"                     
+                Background="{Binding Path = ListOfProperties[24].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>                                 
+                <Button    
+                    Content="{Binding Path = ListOfProperties[25].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[25].Color2}"
+                Height="100"                              
+                Width="100"                               
+                BorderBrush="Black"                       
+                BorderThickness="2"                       
+                Command="{Binding SetColor}"              
+                CommandParameter="A26"                    
+                Background="{Binding Path = ListOfProperties[25].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>                                  
+                <Button     
+                    Content="{Binding Path = ListOfProperties[26].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[26].Color2}"
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                        
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A27"                     
+                Background="{Binding Path = ListOfProperties[26].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>                                 
+                <Button    
+                    Content="{Binding Path = ListOfProperties[27].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[27].Color2}"
+                Height="100"                              
+                Width="100"                               
+                BorderBrush="Black"                       
+                BorderThickness="2"                       
+                Command="{Binding SetColor}"              
+                CommandParameter="A28"                    
+                Background="{Binding Path = ListOfProperties[27].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>                                  
+                <Button     
+                    Content="{Binding Path = ListOfProperties[28].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[28].Color2}"
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                        
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A29"                     
+                Background="{Binding Path = ListOfProperties[28].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>                                 
+                <Button    
+                    Content="{Binding Path = ListOfProperties[29].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[29].Color2}"
+                Height="100"                              
+                Width="100"                               
+                BorderBrush="Black"                       
+                BorderThickness="2"                       
+                Command="{Binding SetColor}"              
+                CommandParameter="A30"                    
+                Background="{Binding Path = ListOfProperties[29].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+            </StackPanel>
+            <StackPanel
+                Width="100">
+                <Button
+                        Content="{Binding Path = ListOfProperties[30].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[30].Color2}"  
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A31"
+                Background="{Binding Path = ListOfProperties[30].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>
+                <Button      
+                    Content="{Binding Path = ListOfProperties[31].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[31].Color2}"                              
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                       
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A32"                     
+                Background="{Binding Path = ListOfProperties[31].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button    Content="{Binding Path = ListOfProperties[32].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[32].Color2}"                               
+                Height="100"                              
+                Width="100"                               
+                BorderBrush="Black"                       
+                BorderThickness="2"                       
+                Command="{Binding SetColor}"              
+                CommandParameter="A33"                    
+                Background="{Binding Path = ListOfProperties[32].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>
+                <Button    Content="{Binding Path = ListOfProperties[33].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[33].Color2}"                                
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                        
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A34"                     
+                Background="{Binding Path = ListOfProperties[33].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>                                  
+                <Button     
+                    Content="{Binding Path = ListOfProperties[34].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[34].Color2}"
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                        
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A35"                     
+                Background="{Binding Path = ListOfProperties[34].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>                                  
+                <Button  
+                    Content="{Binding Path = ListOfProperties[35].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[35].Color2}"
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                        
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A36"                     
+                Background="{Binding Path = ListOfProperties[35].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>                                  
+                <Button   
+                    Content="{Binding Path = ListOfProperties[36].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[36].Color2}"
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                        
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A37"                     
+                Background="{Binding Path = ListOfProperties[36].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>                                  
+                <Button   
+                    Content="{Binding Path = ListOfProperties[37].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[37].Color2}"
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                        
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A38"                     
+                Background="{Binding Path = ListOfProperties[37].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>                                  
+                <Button    
+                    Content="{Binding Path = ListOfProperties[38].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[38].Color2}"
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                        
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A39"                     
+                Background="{Binding Path = ListOfProperties[38].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}"> 
+                </Button>                                  
+                <Button     
+                    Content="{Binding Path = ListOfProperties[39].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[39].Color2}"
+                Height="100"                               
+                Width="100"                                
+                BorderBrush="Black"                        
+                BorderThickness="2"                        
+                Command="{Binding SetColor}"               
+                CommandParameter="A40"                     
+                Background="{Binding Path = ListOfProperties[39].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+            </StackPanel>
+            <StackPanel
+                Width="100">
+                <Button
+                    Content="{Binding Path = ListOfProperties[40].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[40].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A41"
+                Background="{Binding Path = ListOfProperties[40].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[41].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[41].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A42"
+                Background="{Binding Path = ListOfProperties[41].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[42].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[42].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A43"
+                Background="{Binding Path = ListOfProperties[42].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[43].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[43].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A44"
+                Background="{Binding Path = ListOfProperties[43].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[44].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[44].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A45"
+                Background="{Binding Path = ListOfProperties[44].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[45].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[45].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A46"
+                Background="{Binding Path = ListOfProperties[45].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[46].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[46].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A47"
+                Background="{Binding Path = ListOfProperties[46].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[47].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[47].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A48"
+                Background="{Binding Path = ListOfProperties[47].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[48].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[48].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A49"
+                Background="{Binding Path = ListOfProperties[48].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[49].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[49].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A50"
+                Background="{Binding Path = ListOfProperties[49].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+            </StackPanel>
+            <StackPanel
+                Width="100">
+                <Button
+                     Content="{Binding Path = ListOfProperties[50].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[50].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A51"
+                Background="{Binding Path = ListOfProperties[50].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[51].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[51].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A52"
+                Background="{Binding Path = ListOfProperties[51].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[52].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[52].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A53"
+                Background="{Binding Path = ListOfProperties[52].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[53].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[53].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A54"
+                Background="{Binding Path = ListOfProperties[53].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[54].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[54].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A55"
+                Background="{Binding Path = ListOfProperties[54].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[55].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[55].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A56"
+                Background="{Binding Path = ListOfProperties[55].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[56].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[56].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A57"
+                Background="{Binding Path = ListOfProperties[56].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[57].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[57].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A58"
+                Background="{Binding Path = ListOfProperties[57].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[58].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[58].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A59"
+                Background="{Binding Path = ListOfProperties[58].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[59].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[59].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A60"
+                Background="{Binding Path = ListOfProperties[59].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+            </StackPanel>
+            <StackPanel
+                Width="100">
+                <Button
+                    Content="{Binding Path = ListOfProperties[60].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[60].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A61"
+                Background="{Binding Path = ListOfProperties[60].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[61].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[61].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A62"
+                Background="{Binding Path = ListOfProperties[61].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[62].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[62].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A63"
+                Background="{Binding Path = ListOfProperties[62].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[63].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[63].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A64"
+                Background="{Binding Path = ListOfProperties[63].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[64].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[64].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A65"
+                Background="{Binding Path = ListOfProperties[64].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[65].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[65].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A66"
+                Background="{Binding Path = ListOfProperties[65].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[66].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[66].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A67"
+                Background="{Binding Path = ListOfProperties[66].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[67].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[67].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A68"
+                Background="{Binding Path = ListOfProperties[67].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[68].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[68].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A69"
+                Background="{Binding Path = ListOfProperties[68].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[69].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[69].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A70"
+                Background="{Binding Path = ListOfProperties[69].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+            </StackPanel>
+            <StackPanel
+                Width="100">
+                <Button
+                    Content="{Binding Path = ListOfProperties[70].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[70].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A71"
+                Background="{Binding Path = ListOfProperties[70].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[71].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[71].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A72"
+                Background="{Binding Path = ListOfProperties[71].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[72].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[72].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A73"
+                Background="{Binding Path = ListOfProperties[72].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[73].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[73].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A74"
+                Background="{Binding Path = ListOfProperties[73].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[74].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[74].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A75"
+                Background="{Binding Path = ListOfProperties[74].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[75].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[75].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A76"
+                Background="{Binding Path = ListOfProperties[75].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[76].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[76].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A77"
+                Background="{Binding Path = ListOfProperties[76].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[77].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[77].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A78"
+                Background="{Binding Path = ListOfProperties[77].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[78].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[78].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A79"
+                Background="{Binding Path = ListOfProperties[78].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[79].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[79].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A80"
+                Background="{Binding Path = ListOfProperties[79].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+            </StackPanel>
+            <StackPanel
+                Width="100">
+                <Button
+                    Content="{Binding Path = ListOfProperties[80].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[80].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A81"
+                Background="{Binding Path = ListOfProperties[80].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[81].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[81].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A82"
+                Background="{Binding Path = ListOfProperties[81].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[82].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[82].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A83"
+                Background="{Binding Path = ListOfProperties[82].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[83].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[83].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A84"
+                Background="{Binding Path = ListOfProperties[83].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[84].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[84].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A85"
+                Background="{Binding Path = ListOfProperties[84].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[85].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[85].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A86"
+                Background="{Binding Path = ListOfProperties[85].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[86].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[86].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A87"
+                Background="{Binding Path = ListOfProperties[86].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[87].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[87].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A88"
+                Background="{Binding Path = ListOfProperties[87].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[88].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[88].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A89"
+                Background="{Binding Path = ListOfProperties[88].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[89].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[89].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A90"
+                Background="{Binding Path = ListOfProperties[89].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+            </StackPanel>
+            <StackPanel
+                Width="100">
+                <Button
+                    Content="{Binding Path = ListOfProperties[90].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[90].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A91"
+                Background="{Binding Path = ListOfProperties[90].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[91].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[91].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A92"
+                Background="{Binding Path = ListOfProperties[91].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[92].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[92].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A93"
+                Background="{Binding Path = ListOfProperties[92].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[93].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[93].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A94"
+                Background="{Binding Path = ListOfProperties[93].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[94].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[94].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A95"
+                Background="{Binding Path = ListOfProperties[94].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[95].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[95].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A96"
+                Background="{Binding Path = ListOfProperties[95].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[96].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[96].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A97"
+                Background="{Binding Path = ListOfProperties[96].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[97].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[97].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A98"
+                Background="{Binding Path = ListOfProperties[97].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[98].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[98].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A99"
+                Background="{Binding Path = ListOfProperties[98].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+                <Button
+                    Content="{Binding Path = ListOfProperties[99].Name}"
+                FontSize="21"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                Padding="5"
+                FontFamily="Verdana"
+                Foreground="{Binding ListOfProperties[99].Color2}"
+                Height="100"
+                Width="100"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Command="{Binding SetColor}"
+                CommandParameter="A100"
+                Background="{Binding Path = ListOfProperties[99].Color, UpdateSourceTrigger=PropertyChanged}"
+                    Style="{DynamicResource RoundButton}">
+                </Button>
+            </StackPanel>
         </StackPanel>
-        
+        <ListBox
+            x:Name="History"
+            Grid.Row="0"
+            Grid.Column="0"
+            ItemsSource="{Binding Log}"
+            Width="640"
+            HorizontalAlignment="Left"
+            Background="Transparent"
+            Height="640"
+            BorderThickness="0"
+            Margin="50 100 0 0"
+            ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+            ScrollViewer.VerticalScrollBarVisibility="Hidden"
+            MouseEnter="History_MouseEnter">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock
+                            Text="{Binding StringFormat=Ячейка: {0},Path=Adress, UpdateSourceTrigger=PropertyChanged}"
+                            Grid.Column="0"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            />
+                        <TextBlock
+                            Text="{Binding StringFormat=Цвет до: {0},Path =ColorBefore, UpdateSourceTrigger=PropertyChanged}"
+                            Grid.Column="1"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            Margin="10 0 0 0"/>
+                        <TextBlock
+                            Text="{Binding StringFormat=Цвет после: {0},Path=ColorAfter, UpdateSourceTrigger=PropertyChanged}"
+                            Grid.Column="3"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            Margin="10 0 0 0"/>
+                        <TextBlock
+                            Grid.Column="2"
+                            FontSize="18"
+                            FontWeight="ExtraBold"
+                            Margin="10 0 0 0"
+                            Text="A"
+                            Foreground="{Binding StringFormat=Цвет до: {0},Path =ColorBefore, UpdateSourceTrigger=PropertyChanged}"
+                            Background="{Binding StringFormat=Цвет до: {0},Path =ColorBefore, UpdateSourceTrigger=PropertyChanged}"
+                            />
+                        <TextBlock
+                            Grid.Column="4"
+                            FontSize="18"
+                            FontWeight="ExtraBold"
+                            Margin="10 0 0 0"
+                            Text="A"
+                            Foreground="{Binding StringFormat=Цвет до: {0},Path =ColorAfter, UpdateSourceTrigger=PropertyChanged}"
+                            Background="{Binding StringFormat=Цвет до: {0},Path =ColorAfter, UpdateSourceTrigger=PropertyChanged}"
+                            />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         <StackPanel
             Grid.Row="0"
             Grid.Column="0"
-            VerticalAlignment="Top">
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Width="190">
             <Button
                 Height="100"
                 Width="100"
                 HorizontalAlignment="Right"
                 Margin="0 50 60 0"
-                Background="#FF0000"
+                Background="Red"
                 Command="{Binding ChangeColor}"
-                CommandParameter="#FF0000"
-                />
+                CommandParameter="Red"
+                Style="{DynamicResource RoundButton}"
+                >
+                <Button.Content>
+                    <TextBlock
+                        FontSize="21"
+                        FontFamily="Verdana">
+                        <TextBlock.Text>
+                            <MultiBinding StringFormat="{}{0}/{1}">
+                                <Binding Path="GetSets[0].Count" />
+                                <Binding Path="GetGets[0].Count" />
+                            </MultiBinding>
+                        </TextBlock.Text>
+                    </TextBlock>
+                </Button.Content>
+            </Button>
             <Button
                 Height="100"
                 Width="100"
@@ -98,7 +1856,21 @@
                 Background="Orange"
                 Command="{Binding ChangeColor}"
                 CommandParameter="Orange"
-            />
+                Style="{DynamicResource RoundButton}"
+                >
+            <Button.Content>
+                <TextBlock
+                        FontSize="21"
+                        FontFamily="Verdana">
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}/{1}">
+                            <Binding Path="GetSets[1].Count" />
+                            <Binding Path="GetGets[1].Count" />
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+                </Button.Content>
+            </Button>
             <Button
                 Height="100"
                 Width="100"
@@ -107,16 +1879,45 @@
                 Background="Yellow"
                 Command="{Binding ChangeColor}"
                 CommandParameter="Yellow"
-            />
+                Style="{DynamicResource RoundButton}"
+                >
+            <Button.Content>
+                <TextBlock
+                        FontSize="21"
+                        FontFamily="Verdana">
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}/{1}">
+                            <Binding Path="GetSets[2].Count" />
+                            <Binding Path="GetGets[2].Count" />
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+                </Button.Content>
+            </Button>
             <Button
                 Height="100"
                 Width="100"
                 HorizontalAlignment="Right"
                 Margin="0 40 60 0"
                 Background="Green"
+                Foreground="White"
                 Command="{Binding ChangeColor}"
                 CommandParameter="Green"
-            />
+                Style="{DynamicResource RoundButton}"
+                >
+            <Button.Content>
+                <TextBlock
+                        FontSize="21"
+                        FontFamily="Verdana">
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}/{1}">
+                            <Binding Path="GetSets[3].Count" />
+                            <Binding Path="GetGets[3].Count" />
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+                </Button.Content>
+            </Button>
             <Button
                 Height="100"
                 Width="100"
@@ -125,25 +1926,112 @@
                 Background="LightBlue"
                 Command="{Binding ChangeColor}"
                 CommandParameter="LightBlue"
-            />
+                Style="{DynamicResource RoundButton}"
+                >
+            <Button.Content>
+                <TextBlock
+                        FontSize="21"
+                        FontFamily="Verdana">
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}/{1}">
+                            <Binding Path="GetSets[4].Count" />
+                            <Binding Path="GetGets[4].Count" />
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+                </Button.Content>
+            </Button>
             <Button
                 Height="100"
                 Width="100"
                 HorizontalAlignment="Right"
                 Margin="0 40 60 0"
                 Background="Blue"
+                Foreground="White"
                 Command="{Binding ChangeColor}"
                 CommandParameter="Blue"
-            />
+                Style="{DynamicResource RoundButton}"
+                >
+            <Button.Content>
+                <TextBlock
+                        FontSize="21"
+                        FontFamily="Verdana">
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}/{1}">
+                            <Binding Path="GetSets[5].Count" />
+                            <Binding Path="GetGets[5].Count" />
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+                </Button.Content>
+            </Button>
             <Button
                 Height="100"
                 Width="100"
                 HorizontalAlignment="Right"
                 Margin="0 40 60 0"
                 Background="Purple"
+                Foreground="White"
                 Command="{Binding ChangeColor}"
                 CommandParameter="Purple"
-            />
+                Style="{DynamicResource RoundButton}"
+                >
+            <Button.Content>
+                <TextBlock
+                        FontSize="21"
+                        FontFamily="Verdana">
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0}/{1}">
+                            <Binding Path="GetSets[6].Count" />
+                            <Binding Path="GetGets[6].Count" />
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+                </Button.Content>
+            </Button>
         </StackPanel>
+        <TextBlock
+            Text="{Binding GetSets[0].Count}"
+            Grid.Column="0"
+            Grid.Row="0"
+            FontSize="21"
+            Width="100"/>
+        <TextBlock
+            Text="{Binding GetGets[0].Count}"
+            Grid.Column="0"
+            Grid.Row="0"
+            FontSize="21"
+            Margin="0 50 0 0"
+            Width="100"/>
+        <Button
+            Content="Lapse"
+            Width="250"
+            Height="100"
+            FontSize="50"
+            FontFamily="Consolas"
+            Style="{DynamicResource RoundButton}"
+            Background="#562D5C"
+            Foreground="#F2DAF5"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Margin="20"
+            Command="{Binding ClearDB}"
+            />
+        <Button
+            Content="Erase"
+            Width="180"
+            Height="100"
+            FontSize="50"
+            FontFamily="Consolas"
+            Background="#F0EAE6"
+            Foreground="Black"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Center"
+            BorderThickness="5"
+            BorderBrush="Black"
+            Command="{Binding ChangeColor}"
+            CommandParameter="White"
+            Margin="20"
+            />
     </Grid>
 </Window>

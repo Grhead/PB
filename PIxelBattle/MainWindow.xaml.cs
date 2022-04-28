@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,12 +19,20 @@ namespace PIxelBattle
 {
     public partial class MainWindow : Window
     {
-        private List<BasicData> basicDatas = new List<BasicData>();
         public MainWindow()
         {
             InitializeComponent();
             DataContext = new ViewModel();
         }
-        
+
+        private void History_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (History != null)
+            {
+                var border = (Border)VisualTreeHelper.GetChild(History, 0);
+                var scrollViewer = (ScrollViewer)VisualTreeHelper.GetChild(border, 0);
+                scrollViewer.ScrollToBottom();
+            }
+        }
     }
 }
